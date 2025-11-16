@@ -8,9 +8,11 @@ empty, the server will print an error to the console and destroy itself.
 
 # Communication Contract
 REQUEST parameters: folder_path
+
 Example Call:
   socket.send_string(folder_path)
 
 RECEIVE parameters: image_dictionary
+
 Example Call:
   socket.send_json(image_dictionary)
