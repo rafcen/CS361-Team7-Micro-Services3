@@ -16,7 +16,4 @@ RECEIVE parameters: image_dictionary
 
 Example Call:
   socket.send_json(image_dictionary)
-<<<<<<< HEAD
-=======
   
->>>>>>> 787da29 (matched spacing in readme)
