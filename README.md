@@ -17,4 +17,4 @@ RECEIVE parameters: image_dictionary
 Example Call:
   socket.send_json(image_dictionary)
   
-!(UML Diagram)[/UML_diagram.png]
+![UML Diagram](/UML_diagram.png)
