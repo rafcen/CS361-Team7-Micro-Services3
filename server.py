@@ -31,6 +31,8 @@ while True:
         # Break if directory is empty
         if not images:
             print(f"Directory provided has no images")
+            # add empty dict to signal no images found before breaking
+            socket.send_pyobj({})
             break
 
         sorted_images = sorted(images)
