@@ -18,10 +18,13 @@ print(f"Sending parameters: /team-fortress-2")
 socket.send_string(folder_path)
 
 # receive confirmation from server
-return_dict = socket.recv_pyobj()
+return_obj = socket.recv_pyobj()
 # print out confirmation
+if type(return_obj) == str:
+    print("Error: " + return_obj)
+
 print(f"Dictionary recieved, verifying integrity")
-for key, value in return_dict.items():
+for key, value in return_obj.items():
     print(f"{key}: {value}")
 
 # Close connection to server
