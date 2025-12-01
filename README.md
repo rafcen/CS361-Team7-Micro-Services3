@@ -11,6 +11,7 @@ empty, the server will print an error to the console and destroy itself.
 1. Create and activate the virtual environment
 
   `python3 -m venv venv`
+  
   `source venv/bin/activate`       # Linux/macOS
 
 
@@ -40,11 +41,6 @@ REQUEST parameters: folder_path
 Parameter | Type | Description
 --------- | ---- | -----------
 folder_path | str | path to folder containing valid images
-
-
-```
-
-```
 
 Example Call:
 ```
