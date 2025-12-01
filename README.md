@@ -10,21 +10,21 @@ empty, the server will print an error to the console and destroy itself.
 
 1. Create and activate the virtual environment
 
-python3 -m venv venv
-source venv/bin/activate        # Linux/macOS
+  `python3 -m venv venv`
+  `source venv/bin/activate`       # Linux/macOS
 
 
 2. Install dependencies
 
-pip install -r requirements.txt
+  `pip install -r requirements.txt`
 
 3. Start the microservice
 
-python3 server.py
+  `python3 server.py`
 
 Expected output:
 
-Connected to port tcp://*:5002
+  `Connected to port tcp://*:5002`
 
 
 
@@ -41,8 +41,13 @@ Parameter | Type | Description
 --------- | ---- | -----------
 folder_path | str | path to folder containing valid images
 
+
+```
+
+```
+
 Example Call:
-'''
+```
   import os, zmq
 
   folder_path = os.getcwd() +  "/team-fortress-2"
@@ -52,13 +57,13 @@ Example Call:
   socket.connect("tcp://localhost:5002")
 
   socket.send_string(folder_path)
-'''
+```
 
 ### How to Receive Data
 
 Successful Python Dictionary Response:
 
-'''
+```
 {
   "image1": "/Users/trentscoggins/Documents/OSU/CS361/Microservice3/CS361-Team7-Micro-Services3/team-fortress-2/boxart.jpg"
   "image2": "/Users/trentscoggins/Documents/OSU/CS361/Microservice3/CS361-Team7-Micro-Services3/team-fortress-2/image1.jpg"
@@ -66,16 +71,16 @@ Successful Python Dictionary Response:
   "image4": "/Users/trentscoggins/Documents/OSU/CS361/Microservice3/CS361-Team7-Micro-Services3/team-fortress-2/image3.jpg"
   "image5": "/Users/trentscoggins/Documents/OSU/CS361/Microservice3/CS361-Team7-Micro-Services3/team-fortress-2/image4.jpg"
 }
-'''
+```
 
 Error Response Format:
 
-'''
+```
   "Directory provided has no valid images"
-'''
+```
 Example Call:
 
-'''
+```
 return_obj = socket.recv_pyobj()
 
 if type(return_obj) == str:
@@ -83,6 +88,6 @@ if type(return_obj) == str:
 
 for key, value in return_obj.items():
     print(f"{key}: {value}")
-'''
+```
   
 ![UML Diagram](/UML_diagram.png)
