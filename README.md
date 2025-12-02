@@ -83,9 +83,9 @@ return_obj = socket.recv_pyobj()
 
 if type(return_obj) == str:
     print("Error: " + return_obj)
-
-for key, value in return_obj.items():
-    print(f"{key}: {value}")
+else:
+  for key, value in return_obj.items():
+      print(f"{key}: {value}")
 ```
   
 ![UML Diagram](/UML_diagram.png)
