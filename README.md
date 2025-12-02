@@ -34,6 +34,7 @@ Expected output:
 How to programmatically request and recieve data from this microservice:
 
 - Server requires a folder path to be explicity provided
+- Server expects the client to connect to port 5002
 
 ### How to Request Data
 
